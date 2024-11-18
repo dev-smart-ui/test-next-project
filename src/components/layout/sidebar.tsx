@@ -1,14 +1,14 @@
 "use client"
+import {usePathname} from "next/navigation";
 import Image from "next/image";
 import {ROUTES} from "@/routes/routes";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
 import {Icons} from "@/components/layout/icons";
 import {useEffect, useRef, useState} from "react";
 
 export const Sidebar = () => {
-  const pathname = usePathname()
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,6 +22,10 @@ export const Sidebar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
