@@ -1,10 +1,12 @@
 export const ROUTES = [
   {
     path: "/",
-    name: "Dashboard"
+    name: "Dashboard",
+    icon: "dashboard"
   },
   {
     path: "/news",
-    name: "News"
+    name: "News",
+    icon: "news"
   },
 ]
