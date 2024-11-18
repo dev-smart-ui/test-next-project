@@ -1,0 +1,87 @@
+{
+  "title": "Welcome to Your Dashboard!",
+  "description": "Stay on top of everything with your personalized overview.\nExplore insights, manage your tasks, and access key features with ease.",
+  "info": [
+    {
+      "name": "My Wallet",
+      "number": "$865.2k"
+    },
+    {
+      "name": "Number of Trades",
+      "number": "6258"
+    },
+    {
+      "name": "Invested Amount",
+      "number": "$4.32M"
+    },
+    {
+      "name": "Profit Ration",
+      "number": "12.57%"
+    }
+  ],
+  "transactions": [
+    {
+      "type": "Buy",
+      "coin": "BTC",
+      "time": "14 Mar, 2021",
+      "value": "0.016",
+      "amount": "$125.20"
+    },
+    {
+      "type": "Sell",
+      "coin": "ETH",
+      "time": "15 Mar, 2021",
+      "value": "0.56",
+      "amount": "$112.34"
+    },
+    {
+      "type": "Buy",
+      "coin": "LTC",
+      "time": "16 Mar, 2021",
+      "value": "1.88",
+      "amount": "$94.22"
+    },
+    {
+      "type": "Buy",
+      "coin": "BTC",
+      "time": "14 Mar, 2021",
+      "value": "0.016",
+      "amount": "$125.20"
+    },
+    {
+      "type": "Sell",
+      "coin": "ETH",
+      "time": "15 Mar, 2021",
+      "value": "0.56",
+      "amount": "$112.34"
+    },
+    {
+      "type": "Buy",
+      "coin": "LTC",
+      "time": "16 Mar, 2021",
+      "value": "1.88",
+      "amount": "$94.22"
+    },
+    {
+      "type": "Buy",
+      "coin": "BTC",
+      "time": "14 Mar, 2021",
+      "value": "0.016",
+      "amount": "$125.20"
+    },
+    {
+      "type": "Sell",
+      "coin": "ETH",
+      "time": "15 Mar, 2021",
+      "value": "0.56",
+      "amount": "$112.34"
+    },
+    {
+      "type": "Buy",
+      "coin": "LTC",
+      "time": "16 Mar, 2021",
+      "value": "1.88",
+      "amount": "$94.22"
+    }
+  ]
+}
