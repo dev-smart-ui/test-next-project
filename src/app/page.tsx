@@ -1,6 +1,6 @@
 import {Heading} from "@/components/layout/heading";
 import data from "@/data/home.json"
-import {InfoCards} from "@/components/dashboard/infoCards";
+import {InfoCards} from "@/components/dashboard/info-cards";
 import {Transactions} from "@/components/dashboard/transactions";
 export default function Home() {
   return (

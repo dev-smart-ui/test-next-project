@@ -4,11 +4,24 @@ import {ROUTES} from "@/routes/routes";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {Icons} from "@/components/layout/icons";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 export const Sidebar = () => {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -18,7 +31,8 @@ export const Sidebar = () => {
         </svg>
       </button>
       <div
-        className={`w-full max-w-[300px] bg-slate-600 fixed lg:static top-0 left-0 h-full lg:max-w-none transition-transform duration-300 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+        ref={ref}
+        className={`z-[10] w-full max-w-[300px] bg-slate-600 fixed lg:static top-0 left-0 h-full lg:max-w-none transition-transform duration-300 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
         <Icons/>
         <button type={'button'} className={`absolute top-0 left-full text-gray-100 p-5 ${menuOpen ? 'block' : 'hidden'} lg:hidden`}
                 onClick={() => setMenuOpen(false)}>
